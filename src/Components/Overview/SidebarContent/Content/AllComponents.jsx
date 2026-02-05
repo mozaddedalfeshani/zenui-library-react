@@ -5,7 +5,11 @@ import {Helmet} from "react-helmet";
 import {allComponents} from "@utils/AllComponents";
 import BlocksFooter from "@shared/Block/BlocksFooter.jsx";
 
+// i18n
+import { useTranslation } from 'react-i18next';
+
 const AllComponents = () => {
+    const { t } = useTranslation();
     const [buttonsData, setButtonsData] = useState([]);
     const [inputsData, setInputsData] = useState([]);
     const [displayData, setDisplayData] = useState([]);
@@ -49,22 +53,17 @@ const AllComponents = () => {
         <>
             <aside className="w-full 640px:pl-[2.5rem] px-6 640px:px-10">
                 <h2 className="font-[600] text-brandColor uppercase text-[2rem] 425px:text-[2.5rem]">
-                    ZenUI components
+                    {t('all_components_page.title')}
                 </h2>
                 <p className="text-text dark:text-darkSubTextColor text-[1rem]">
-                    Every ZenUI Library component available for free.
+                    {t('all_components_page.intro_1')}
                 </p>
 
                 <p className="text-text dark:text-darkSubTextColor text-[1rem] mt-8">
-                    ZenUI is a website where you can get all the component designs you
-                    want and they are completely free. You can copy and use them in your
-                    own projects from here. All the guidelines are given very nicely on
-                    the website so that you can understand everything well. Our components
-                    are developed following professional coding so you can use them with
-                    confidence.
+                    {t('all_components_page.intro_2')}
                 </p>
 
-                <h2 className="mt-12 font-[600] text-[1.5rem] text-brandColor">Input</h2>
+                <h2 className="mt-12 font-[600] text-[1.5rem] text-brandColor">{t('sidebar.input')}</h2>
                 <div className="grid grid-cols-2 640px:grid-cols-3 1605px:grid-cols-4 mt-4 gap-8">
                     {inputsData?.map((button, index) => (
                         <a href={button.url}
@@ -84,7 +83,7 @@ const AllComponents = () => {
                     ))}
                 </div>
 
-                <h2 className="mt-12 font-[600] text-[1.5rem] text-brandColor">Navigation</h2>
+                <h2 className="mt-12 font-[600] text-[1.5rem] text-brandColor">{t('sidebar.navigation')}</h2>
                 <div className="grid grid-cols-2 640px:grid-cols-3 1605px:grid-cols-4 mt-4 gap-8">
                     {navigationsData?.map((button, index) => (
                         <a href={button.url}
@@ -104,7 +103,7 @@ const AllComponents = () => {
                     ))}
                 </div>
 
-                <h2 className="mt-12 font-[600] text-[1.5rem] mb-3 text-brandColor">Buttons</h2>
+                <h2 className="mt-12 font-[600] text-[1.5rem] mb-3 text-brandColor">{t('sidebar.buttons')}</h2>
                 <div className="grid grid-cols-2 640px:grid-cols-3 1605px:grid-cols-4 gap-8">
                     {buttonsData?.map((button, index) => (
                         <a href={button.url}
@@ -124,7 +123,7 @@ const AllComponents = () => {
                     ))}
                 </div>
 
-                <h2 className="mt-12 font-[600] text-[1.5rem] text-brandColor">Feedback</h2>
+                <h2 className="mt-12 font-[600] text-[1.5rem] text-brandColor">{t('sidebar.feedback')}</h2>
                 <div className="grid grid-cols-2 640px:grid-cols-3 1605px:grid-cols-4 mt-4 gap-8">
                     {feedbackData?.map((button, index) => (
                         <a href={button.url}
@@ -144,7 +143,7 @@ const AllComponents = () => {
                     ))}
                 </div>
 
-                <h2 className="mt-12 font-[600] text-[1.5rem] mb-3 text-brandColor">Surface</h2>
+                <h2 className="mt-12 font-[600] text-[1.5rem] mb-3 text-brandColor">{t('sidebar.surfaces')}</h2>
                 <div className="grid grid-cols-2 640px:grid-cols-3 1605px:grid-cols-4 gap-8">
                     {surfaceData?.map((button, index) => (
                         <a href={button.url}
@@ -164,7 +163,7 @@ const AllComponents = () => {
                     ))}
                 </div>
 
-                <h2 className="mt-12 font-[600] text-[1.5rem] mb-3 text-brandColor">Data Display</h2>
+                <h2 className="mt-12 font-[600] text-[1.5rem] mb-3 text-brandColor">{t('sidebar.data_display')}</h2>
                 <div className="grid grid-cols-2 640px:grid-cols-3 1605px:grid-cols-4 gap-8">
                     {displayData?.map((button, index) => (
                         <a href={button.url}
