@@ -1,0 +1,28 @@
+{
+  "navbar": {
+    "documentation": "ডকুমেন্টেশন",
+    "components": "কম্পোনেন্টস",
+    "tools": "টুলস",
+    "contributors": "কন্ট্রিবিউটর",
+    "search_placeholder": "কম্পোনেন্ট খুঁজুন",
+    "search_placeholders": {
+        "components": "কম্পোনেন্টস",
+        "blocks": "ব্লকস",
+        "templates": "টেমপ্লেট",
+        "ecommerce_kits": "ই-কমার্স কিটস",
+        "animated_components": "অ্যানিমেটেড কম্পোনেন্টস"
+    }
+  },
+  "tools_dropdown": {
+    "shotkey": "শর্টকি",
+    "shotkey_desc": "সহজে কীবোর্ড শর্টকাট তৈরি করুন",
+    "color_palettes": "কালার প্যালেট",
+    "color_palettes_desc": "সামঞ্জস্যপূর্ণ রঙের সেট",
+    "icons": "আইকন",
+    "icons_desc": "পরিষ্কার দৃশ্যের জন্য স্কেলেবল আইকন",
+    "config_ai": "কনফিগ এআই",
+    "config_ai_desc": "এআই দিয়ে টেইলউইন্ড কনফিগ ফাইল তৈরি করুন",
+    "semantic_tagmaster": "সিমান্টিক ট্যাগমাস্টার",
+    "semantic_tagmaster_desc": "এইচটিএমএল সিমান্টিক ট্যাগের ব্যবহার"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "navbar": {
+    "documentation": "Documentation",
+    "components": "Components",
+    "tools": "Tools",
+    "contributors": "Contributors",
+    "search_placeholder": "search component",
+    "search_placeholders": {
+        "components": "Components",
+        "blocks": "Blocks",
+        "templates": "Templates",
+        "ecommerce_kits": "E-commerce Kits",
+        "animated_components": "Animated Components"
+    }
+  },
+  "tools_dropdown": {
+    "shotkey": "ShotKey",
+    "shotkey_desc": "generate keyboard shortcuts easily.",
+    "color_palettes": "Color Palettes",
+    "color_palettes_desc": "Harmonized color sets.",
+    "icons": "Icons",
+    "icons_desc": "Scalable icons for clear visuals.",
+    "config_ai": "Config AI",
+    "config_ai_desc": "Generate tailwind config file by AI.",
+    "semantic_tagmaster": "Semantic TagMaster",
+    "semantic_tagmaster_desc": "HTML semantic tags use cases"
+  }
+}
