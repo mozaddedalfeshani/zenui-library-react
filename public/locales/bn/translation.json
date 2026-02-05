@@ -24,5 +24,52 @@
     "config_ai_desc": "এআই দিয়ে টেইলউইন্ড কনফিগ ফাইল তৈরি করুন",
     "semantic_tagmaster": "সিমান্টিক ট্যাগমাস্টার",
     "semantic_tagmaster_desc": "এইচটিএমএল সিমান্টিক ট্যাগের ব্যবহার"
+  },
+  "hero": {
+      "title_prefix": "রিয়েক্ট ডেভেলপারদের জন্য ওপেন সোর্স",
+      "title_highlight": "UI কম্পোনেন্ট লাইব্রেরি",
+      "description": "ZenUI হল আপনার সব-ইন-ওয়ান React + Tailwind CSS কম্পোনেন্ট লাইব্রেরি। আপনার ডেভেলপমেন্ট ওয়ার্কফ্লো দ্রুত করতে রেডি-টু-ইউজ UI কম্পোনেন্ট।",
+      "browse_components": "কম্পোনেন্ট দেখুন",
+      "documentation": "ডকুমেন্টেশন",
+      "compatible_with": "কম্প্যাটিবল উইথ:"
+  },
+  "footer": {
+      "description": "বিনামূল্যে UI কম্পোনেন্ট, কাস্টমাইজযোগ্য আইকন এবং কালার প্যালেট দিয়ে আপনার প্রজেক্টকে উন্নত করুন। কোন ডিপেন্ডেন্সির প্রয়োজন নেই।",
+      "tools": "টুলস",
+      "products": "প্রোডাক্টস",
+      "company": "কোম্পানি",
+      "join_newsletter": "আমাদের নিউজলেটারে যোগ দিন",
+      "your_email": "আপনার ইমেইল",
+      "subscribe": "সাবস্ক্রাইব",
+      "subscription_success": "সাবস্ক্রিপশন সফল হয়েছে! আমাদের সাথে যোগ দেওয়ার জন্য ধন্যবাদ।",
+      "product_of": "একটি পণ্য",
+      "facebook_community": "ফেসবুক কমিউনিটি",
+      "discord_community": "ডিসকর্ড কমিউনিটি",
+      "members": "সদস্য"
+  },
+  "sidebar": {
+      "overview": "ওভারভিউ",
+      "installation": "ইনস্টলেশন",
+      "resources": "রিসোর্স",
+      "templates": "টেমপ্লেট",
+      "components": "কম্পোনেন্টস",
+      "animations": "অ্যানিমেশন",
+      "blocks": "ব্লকস",
+      "all_components": "সব কম্পোনেন্ট",
+      "all_blocks": "সব ব্লক",
+      "form": "ফর্ম",
+      "buttons": "বাটন",
+      "surfaces": "সারফেস",
+      "navigation": "ন্যাভিগেশন",
+      "feedback": "ফিডব্যাক",
+      "data_display": "ডেটা ডিসপ্লে",
+      "ecommerce": "ই-কমার্স",
+      "randoms": "র‍্যান্ডম",
+      "cards": "কার্ড",
+      "layouts": "লেআউট",
+      "visuals": "ভিজ্যুয়াল",
+      "sections": "সেকশন",
+      "empty_pages": "খালি পেজ",
+      "random": "র‍্যান্ডম"
   }
 }

@@ -24,5 +24,52 @@
     "config_ai_desc": "Generate tailwind config file by AI.",
     "semantic_tagmaster": "Semantic TagMaster",
     "semantic_tagmaster_desc": "HTML semantic tags use cases"
+  },
+  "hero": {
+      "title_prefix": "Open-Source UI Components Library for",
+      "title_highlight": "React Developers",
+      "description": "ZenUI is your all-in-one React + Tailwind CSS component library. Ready to use UI components for faster your development workflow.",
+      "browse_components": "Browse Components",
+      "documentation": "Documentation",
+      "compatible_with": "Compatible With:"
+  },
+  "footer": {
+      "description": "Elevate your project with free UI components, customizable icons, and a color palette. No dependencies required.",
+      "tools": "Tools",
+      "products": "Products",
+      "company": "Company",
+      "join_newsletter": "Join our newsletter",
+      "your_email": "Your Email",
+      "subscribe": "Subscribe",
+      "subscription_success": "Subscription successful! Thank you for joining us.",
+      "product_of": "A product of",
+      "facebook_community": "Facebook Community",
+      "discord_community": "Discord Community",
+      "members": "Members"
+  },
+  "sidebar": {
+      "overview": "Overview",
+      "installation": "Installation",
+      "resources": "Resources",
+      "templates": "Templates",
+      "components": "Components",
+      "animations": "Animations",
+      "blocks": "Blocks",
+      "all_components": "All Components",
+      "all_blocks": "All Blocks",
+      "form": "FORM",
+      "buttons": "BUTTONS",
+      "surfaces": "SURFACES",
+      "navigation": "NAVIGATION",
+      "feedback": "FEEDBACK",
+      "data_display": "DATA DISPLAY",
+      "ecommerce": "E-COMMERCE",
+      "randoms": "RANDOMS",
+      "cards": "CARDS",
+      "layouts": "LAYOUTS",
+      "visuals": "VISUALS",
+      "sections": "SECTIONS",
+      "empty_pages": "EMPTY PAGES",
+      "random": "RANDOM"
   }
 }
