@@ -5,110 +5,74 @@ import ContentHeader from "@shared/ContentHeader";
 import {Helmet} from "react-helmet";
 import BlocksFooter from "@shared/Block/BlocksFooter.jsx";
 
+// i18n
+import { useTranslation } from 'react-i18next';
+
 const Overview = () => {
+    const { t } = useTranslation();
+
     return (
         <aside className='w-full 640px:pl-[2.5rem] px-6 640px:px-10'>
 
             <h1 className="font-[600] pt-0 text-[2.5rem] 1024px:text-[3rem] uppercase text-brandColor">
-                ZenUI Library React
+                {t('overview.title')}
             </h1>
             <p className="w-full text-text dark:text-darkSubTextColor text-[1rem]">
-                ZenUI is your ultimate destination for a comprehensive collection of UI components and designs, all
-                available for free. Whether you&#39;re building a website from scratch or enhancing an existing one,
-                ZenUI
-                has
-                everything you need to bring your vision to life.
+                {t('overview.intro')}
             </p>
 
             <div className="mt-8 w-full text-text">
-                <ContentHeader text="About ZenUI"/>
+                <ContentHeader text={t('overview.about_title')}/>
                 <p className="mt-3 dark:text-darkSubTextColor">
-                    ZenUI is a developer-friendly platform designed to accelerate your workflow and inspire creativity.
-                    It offers a
-                    rich collection of meticulously crafted components that help you build modern, responsive, and
-                    visually appealing web interfaces with ease.
+                    {t('overview.about_desc_1')}
                 </p>
                 <p className="mt-4 dark:text-darkSubTextColor">
-                    Our ecosystem includes ZenUI for React/Next.js and
-                    ZenUI for <a href="https://vueui.zenui.net/" target="_blank"
-                                 className="text-brandColor hover:underline" rel="noreferrer">Vue</a>, providing robust,
-                    framework-specific libraries
-                    that integrate seamlessly into your projects. Every component is reusable, customizable, and built
-                    following
-                    contemporary design standards to ensure consistency and performance.
+                    {t('overview.about_desc_2_prefix')} <a href="https://vueui.zenui.net/" target="_blank"
+                                 className="text-brandColor hover:underline" rel="noreferrer">Vue</a>{t('overview.about_desc_2_suffix')}
                 </p>
             </div>
 
             <div className="mt-8 w-full text-text">
-                <ContentHeader text={"What will you get?"}/>
+                <ContentHeader text={t('overview.what_get_title')}/>
                 <ul className="flex flex-col gap-3 list-disc ml-8 mt-3">
                     <li className="p-0 hover:bg-transparent border-none dark:text-darkSubTextColor hover:border-none hover:font-[400] hover:bg-secondary">
-                        <b>Reusable Advanced Components:</b> Access a suite of highly customizable, production-ready
-                        components built with best practices in mind. From complex forms to interactive tabs and
-                        accordions, these components save development time while ensuring consistency across your
-                        project.
+                        <b>{t('overview.reusable_components_title')}</b> {t('overview.reusable_components_desc')}
                     </li>
                     <li className="p-0 hover:bg-transparent border-none dark:text-darkSubTextColor hover:border-none hover:font-[400] hover:bg-secondary">
-                        <b>Multi-Page Website Templates:</b> Choose from a variety of pre-built multi-page templates,
-                        perfect for businesses, blogs, and more. These templates are crafted to help you quickly
-                        establish
-                        an online presence.
+                        <b>{t('overview.templates_title')}</b> {t('overview.templates_desc')}
                     </li>
                     <li className="p-0 hover:bg-transparent border-none dark:text-darkSubTextColor hover:border-none hover:font-[400] hover:bg-secondary">
-                        <b>Website Blocks:</b> Access a wide range of essential UI blocks that you can mix and match
-                        to
-                        create unique page layouts effortlessly.
+                        <b>{t('overview.blocks_title')}</b> {t('overview.blocks_desc')}
                     </li>
                     <li className="p-0 hover:bg-transparent border-none dark:text-darkSubTextColor hover:border-none hover:font-[400] hover:bg-secondary">
-                        <b>SVG Icons:</b> Our growing library of SVG icons provides a modern touch to any project, with
-                        easy integration and customization options.
+                        <b>{t('overview.icons_title')}</b> {t('overview.icons_desc')}
                     </li>
                     <li className="p-0 hover:bg-transparent border-none dark:text-darkSubTextColor hover:border-none hover:font-[400] hover:bg-secondary">
-                        <b>Animated Components:</b> Bring your website to life with a collection of ready-to-use
-                        animated components using Framer-Motion. These subtle yet impactful animations improve user
-                        engagement and provide a
-                        polished, professional look to any design.
+                        <b>{t('overview.animated_title')}</b> {t('overview.animated_desc')}
                     </li>
                     <li className="p-0 hover:bg-transparent border-none dark:text-darkSubTextColor hover:border-none hover:font-[400] hover:bg-secondary">
-                        <b>Color Palette:</b> Introducing the custom color opacity palette. A versatile tool that
-                        allows
-                        you to explore different opacity variations of colors. Simply paste your color code, and the
-                        palette will generate a range of opacity levels along with the corresponding HEX, RGB, and HSL
-                        codes. Clicking on a color code instantly copies it to your clipboard, making color management a
-                        breeze.
+                        <b>{t('overview.color_palette_title')}</b> {t('overview.color_palette_desc')}
                     </li>
                 </ul>
             </div>
 
             <div className="mt-8 w-full text-text">
-                <ContentHeader text={"Advantages of ZenUI Library"}/>
+                <ContentHeader text={t('overview.advantages_title')}/>
                 <ul className="flex flex-col gap-3 list-disc ml-8 mt-3">
                     <li className="p-0 hover:bg-transparent border-none dark:text-darkSubTextColor hover:border-none hover:font-[400] hover:bg-secondary">
-                        <b>No Dependencies Needed:</b> ZenUI is entirely standalone, just copy the code and use it. No
-                        external dependencies or additional setups are required, making integration fast and
-                        hassle-free.
+                        <b>{t('overview.no_dependencies_title')}</b> {t('overview.no_dependencies_desc')}
                     </li>
                     <li className="p-0 hover:bg-transparent border-none dark:text-darkSubTextColor hover:border-none hover:font-[400] hover:bg-secondary">
-                        <b>Customizability:</b> Our codes are very structured so you can
-                        customize them to your liking. You can customize the components
-                        according to your business logic.
+                        <b>{t('overview.customizability_title')}</b> {t('overview.customizability_desc')}
                     </li>
                     <li className="p-0 hover:bg-transparent border-none dark:text-darkSubTextColor hover:border-none hover:font-[400] hover:bg-secondary">
-                        <b>Beautiful Design:</b> All the components follow the ZenUI modern
-                        design. So you don't have to redesign to use them. More exciting
-                        thing is that since there is no need to design, you save your
-                        designing time.
+                        <b>{t('overview.design_title')}</b> {t('overview.design_desc')}
                     </li>
                     <li className="p-0 hover:bg-transparent border-none dark:text-darkSubTextColor hover:border-none hover:font-[400] hover:bg-secondary">
-                        <b>Pre build templetes:</b> ZenUI has many pre-built web templates.
-                        You can create a website without using them without any code. We
-                        have tried to follow the most modern design by following the design.
-                        The ZenUI contains 20+ web templates.
+                        <b>{t('overview.prebuild_title')}</b> {t('overview.prebuild_desc')}
                     </li>
                     <li className="p-0 hover:bg-transparent border-none dark:text-darkSubTextColor hover:border-none hover:font-[400] hover:bg-secondary">
-                        <b>Community & Support:</b> ZenUI is more than just a library it's a community. Join other
-                        developers, share your work, get feedback, and collaborate to push the boundaries of what's
-                        possible.
+                        <b>{t('overview.community_title')}</b> {t('overview.community_desc')}
                     </li>
                 </ul>
             </div>
