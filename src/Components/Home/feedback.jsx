@@ -6,13 +6,15 @@ import FeedbackCard from "./FeedbackCard.jsx"
 import SectionHead from "./SectionHead.jsx";
 import SectionWrapper from "./SectionWrapper.jsx";
 
+// i18n
+import { useTranslation } from 'react-i18next';
+
 const Feedback = () => {
+    const { t } = useTranslation();
 
     return (
         <SectionWrapper className='relative mt-28'>
-            <SectionHead isSubjet={'Wall Of'} title={'Love'} description={'Thoughts\n' +
-                '                    from those who\'ve\n' +
-                '                    experienced ZenUI in action.'}/>
+            <SectionHead isSubjet={t('home.feedback.subject')} title={t('home.feedback.title')} description={t('home.feedback.description')}/>
 
             <div className='w-full mt-14 grid grid-cols-1 640px:grid-cols-3 gap-[20px]'>
 
