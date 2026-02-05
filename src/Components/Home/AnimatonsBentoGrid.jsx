@@ -9,16 +9,19 @@ import StarfieldWarpExample from "@/Components/Home/AnimatedCards/StarfieldWarpE
 import ShuffleSortExample from "@/Components/Home/AnimatedCards/ShuffleSortExample.jsx";
 import {useNavigate} from "react-router-dom";
 
-const AnimationsBentoGrid = () => {
+// i18n
+import { useTranslation } from 'react-i18next';
 
+const AnimationsBentoGrid = () => {
+    const { t } = useTranslation();
     const navigate = useNavigate()
 
     return (
         <SectionWrapper className='mt-36 640px:mt-40'>
             <SectionHead
-                description={'Reusable UI components with smooth animations — built to speed up development and enhance user experience.'}
-                isSubjet={'50+'}
-                title={'Animated Components'}/>
+                description={t('home.animations.description')}
+                isSubjet={t('home.animations.subject')}
+                title={t('home.animations.title')}/>
 
             <div className='grid grid-cols-12 mt-14 min-h-[500px] gap-3'>
                 <div
@@ -47,7 +50,7 @@ const AnimationsBentoGrid = () => {
                 onClick={() => navigate("/animations/installation")}
                 className='py-3 px-6 640px:px-8 bg-[#0FABCA] text-white rounded-normal mx-auto mt-12 hover:bg-[#1cbedb] transition-all flex items-center justify-center gap-3 duration-300 group'
             >
-                All Animated Components
+                {t('home.animations.all_animated_components')}
             </button>
         </SectionWrapper>
     );
