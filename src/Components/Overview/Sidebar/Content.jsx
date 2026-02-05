@@ -4,7 +4,12 @@ import ResourceIcon from "@/SvgIcons/ResourceIcon.jsx";
 import TemplatesIcon from "@/SvgIcons/TemplatesIcon.jsx";
 import { CollapseMenu, DefaultMenu } from "./children/Menu/index.jsx";
 
+// i18n
+import { useTranslation } from 'react-i18next';
+
 const Content = () => {
+    const { t } = useTranslation();
+
     return (
         <>
             {/*  get starts  */}
@@ -14,7 +19,7 @@ const Content = () => {
                         bgColor: "bg-blue-600",
                         borderColor: "border-blue-600",
                         textColor: "text-blue-600",
-                        title: "Overview",
+                        title: t('sidebar.overview'),
                         icon: OverviewIcon,
                         url: "/docs/overview",
                     },
@@ -22,7 +27,7 @@ const Content = () => {
                         bgColor: "bg-green-600",
                         borderColor: "border-green-600",
                         textColor: "text-green-600",
-                        title: "Installation",
+                        title: t('sidebar.installation'),
                         icon: InstallationIcon,
                         url: "/docs/installation",
                     },
@@ -30,7 +35,7 @@ const Content = () => {
                         bgColor: "bg-purple-600",
                         borderColor: "border-purple-600",
                         textColor: "text-purple-600",
-                        title: "Resources",
+                        title: t('sidebar.resources'),
                         icon: ResourceIcon,
                         url: "/docs/resources",
                     },
@@ -38,7 +43,7 @@ const Content = () => {
                         bgColor: "bg-indigo-600",
                         borderColor: "border-indigo-600",
                         textColor: "text-indigo-600",
-                        title: "Templates",
+                        title: t('sidebar.templates'),
                         icon: TemplatesIcon,
                         url: "/templates",
                     },
@@ -46,14 +51,14 @@ const Content = () => {
             />
             {/*  components  */}
             <CollapseMenu
-                title="Components"
+                title={t('sidebar.components')}
                 items={[
                     {
-                        title: "All Components",
+                        title: t('sidebar.all_components'),
                         url: "/components/all-components",
                     },
                     {
-                        label: "FORM",
+                        label: t('sidebar.form'),
                     },
                     {
                         title: "Input",
@@ -111,7 +116,7 @@ const Content = () => {
                         parent: 'FORM'
                     },
                     {
-                        label: "BUTTONS",
+                        label: t('sidebar.buttons'),
                     },
                     {
                         title: "Normal Button",
@@ -135,7 +140,7 @@ const Content = () => {
                         isUpdated: true
                     },
                     {
-                        label: "SURFACES",
+                        label: t('sidebar.surfaces'),
                     },
                     {
                         title: "Drag & Drop",
@@ -190,7 +195,7 @@ const Content = () => {
                         isUpdated: true,
                     },
                     {
-                        label: "NAVIGATION",
+                        label: t('sidebar.navigation'),
                     },
                     {
                         title: "Pagination",
@@ -252,7 +257,7 @@ const Content = () => {
                         parent: 'NAVIGATION'
                     },
                     {
-                        label: "FEEDBACK",
+                        label: t('sidebar.feedback'),
                     },
                     {
                         title: "Context Menu",
@@ -295,7 +300,7 @@ const Content = () => {
                         parent: 'FEEDBACK'
                     },
                     {
-                        label: "DATA DISPLAY",
+                        label: t('sidebar.data_display'),
                     },
                     {
                         title: "Badge",
@@ -339,7 +344,7 @@ const Content = () => {
                         parent: 'DATA DISPLAY',
                     },
                     {
-                        label: "E-COMMERCE",
+                        label: t('sidebar.ecommerce'),
                     },
                     {
                         title: "Product Card",
@@ -352,7 +357,7 @@ const Content = () => {
                         parent: 'E-COMMERCE',
                     },
                     {
-                        label: "RANDOMS",
+                        label: t('sidebar.randoms'),
                     },
                     {
                         title: "Code",
@@ -368,14 +373,14 @@ const Content = () => {
             />
             {/*  animations  */}
             <CollapseMenu
-                title={"Animations"}
+                title={t('sidebar.animations')}
                 items={[
                     {
-                        title: "Installation",
+                        title: t('sidebar.installation'),
                         url: "/animations/installation",
                     },
                     {
-                        label: "CARDS",
+                        label: t('sidebar.cards'),
                     },
                     {
                         title: "Magic Card",
@@ -393,7 +398,7 @@ const Content = () => {
                         parent: 'CARDS'
                     },
                     {
-                        label: "LAYOUTS",
+                        label: t('sidebar.layouts'),
                     },
                     {
                         title: "Sorting Animation",
@@ -416,7 +421,7 @@ const Content = () => {
                         parent: 'LAYOUTS'
                     },
                     {
-                        label: "BUTTONS",
+                        label: t('sidebar.buttons'),
                     },
                     {
                         title: "Reaction Trail",
@@ -430,7 +435,7 @@ const Content = () => {
                         parent: 'BUTTONS'
                     },
                     {
-                        label: "VISUALS",
+                        label: t('sidebar.visuals'),
                     },
                     {
                         title: "Text Effects",
@@ -474,14 +479,14 @@ const Content = () => {
             />
             {/*  blocks  */}
             <CollapseMenu
-                title={"Blocks"}
+                title={t('sidebar.blocks')}
                 items={[
                     {
-                        title: "All Blocks",
+                        title: t('sidebar.all_blocks'),
                         url: "/blocks/all-blocks",
                     },
                     {
-                        label: "SECTIONS",
+                        label: t('sidebar.sections'),
                     },
                     {
                         title: "Responsive Navbar",
@@ -504,7 +509,7 @@ const Content = () => {
                         parent: 'Sections'
                     },
                     {
-                        label: "FORM",
+                        label: t('sidebar.form'),
                     },
                     {
                         title: "Contact Form",
@@ -522,7 +527,7 @@ const Content = () => {
                         parent: 'Form'
                     },
                     {
-                        label: "EMPTY PAGES",
+                        label: t('sidebar.empty_pages'),
                     },
                     {
                         title: "404 Page",
@@ -535,7 +540,7 @@ const Content = () => {
                         parent: 'Empty Pages'
                     },
                     {
-                        label: "E-COMMERCE",
+                        label: t('sidebar.ecommerce'),
                     },
                     {
                         title: "Offer Grid",
@@ -553,7 +558,7 @@ const Content = () => {
                         parent: 'E-Commerce',
                     },
                     {
-                        label: "RANDOM",
+                        label: t('sidebar.random'),
                     },
                     {
                         title: "Responsive Search Bar",
