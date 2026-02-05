@@ -8,7 +8,11 @@ import useZenuiStore from "@/Store/Index.js";
 import SectionWrapper from "./SectionWrapper.jsx";
 import {GoArrowUpRight} from "react-icons/go";
 
+// i18n
+import { useTranslation } from 'react-i18next';
+
 const Footer = ({needMuchMargin = true}) => {
+    const { t } = useTranslation();
     const {theme} = useZenuiStore()
 
     const [result, setResult] = React.useState("");
@@ -27,7 +31,7 @@ const Footer = ({needMuchMargin = true}) => {
         const data = await response.json();
 
         if (data.success) {
-            setResult("Subscription successful! Thank you for joining us.");
+            setResult(t('footer.subscription_success'));
             event.target.reset();
             setTimeout(() => {
                 setResult('')
@@ -47,9 +51,7 @@ const Footer = ({needMuchMargin = true}) => {
                         <img src="/footer_logo.png" alt="logo" className="w-[150px] 640px:w-[180px] my-3"/>
 
                         <p className="dark:text-darkSubTextColor text-black/70 text-[1rem]">
-                            Elevate your project with free UI components, customizable icons, and a color palette. No
-                            dependencies
-                            required.
+                            {t('footer.description')}
                         </p>
 
                         <div className="flex items-center gap-4 mt-5">
@@ -78,31 +80,31 @@ const Footer = ({needMuchMargin = true}) => {
 
                     <div className="flex gap-2 flex-col mt-4">
                         <h3 className="font-[600] dark:text-darkTextColor text-[20px] capitalize">
-                            tools
+                            {t('footer.tools')}
                         </h3>
                         <ul className="footer font-[400] text-black/70 dark:text-darkSubTextColor mt-2 text-[1rem] flex flex-col gap-2">
                             <li>
-                                <p><a href='/shortcut-generator'>ShortKey</a></p>
-                                <span><a href='/shortcut-generator'>ShortKey</a></span>
+                                <p><a href='/shortcut-generator'>{t('tools_dropdown.shotkey')}</a></p>
+                                <span><a href='/shortcut-generator'>{t('tools_dropdown.shotkey')}</a></span>
                             </li>
                             <li>
-                                <p><a href='/color-palette'>Colors Palette</a></p>
-                                <span><a href='/color-palette'>Colors Palette</a></span>
+                                <p><a href='/color-palette'>{t('tools_dropdown.color_palettes')}</a></p>
+                                <span><a href='/color-palette'>{t('tools_dropdown.color_palettes')}</a></span>
                             </li>
                             <li>
-                                <p><a href='/icons'>Icons</a></p>
-                                <span><a href='/icons'>Icons</a></span>
+                                <p><a href='/icons'>{t('tools_dropdown.icons')}</a></p>
+                                <span><a href='/icons'>{t('tools_dropdown.icons')}</a></span>
                             </li>
                             <li>
-                                <p><a href='/config-generator'>Config AI</a></p>
-                                <span><a href='/config-generator'>Config AI</a></span>
+                                <p><a href='/config-generator'>{t('tools_dropdown.config_ai')}</a></p>
+                                <span><a href='/config-generator'>{t('tools_dropdown.config_ai')}</a></span>
                             </li>
                         </ul>
                     </div>
 
                     <div className="flex gap-2 flex-col mt-4">
                         <h3 className="font-[600] dark:text-darkTextColor text-[20px] capitalize">
-                            Products
+                            {t('footer.products')}
                         </h3>
                         <ul className="footer font-[400] text-black/70 dark:text-darkSubTextColor mt-2 text-[1rem] flex flex-col gap-2">
                             <li>
@@ -136,12 +138,12 @@ const Footer = ({needMuchMargin = true}) => {
 
                     <div className="flex gap-2 flex-col mt-4">
                         <h3 className="font-[600] dark:text-darkTextColor text-[20px] capitalize">
-                            Company
+                            {t('footer.company')}
                         </h3>
                         <ul className="footer font-[400] text-[1rem] dark:text-darkSubTextColor mt-2 text-black/70 flex flex-col gap-2">
                             <li>
-                                <p><a href='/contributors'>Contributors</a></p>
-                                <span><a href='/contributors'>Contributors</a></span>
+                                <p><a href='/contributors'>{t('navbar.contributors')}</a></p>
+                                <span><a href='/contributors'>{t('navbar.contributors')}</a></span>
                             </li>
                             <li>
                                 <p><a href='/privacy-policy'>Privacy policy</a></p>
@@ -171,7 +173,7 @@ const Footer = ({needMuchMargin = true}) => {
                     </div>
                     <div className="flex gap-2 flex-col mt-4">
                         <h3 className="font-[600] dark:text-darkTextColor text-[20px] capitalize">
-                            Join our newsletter
+                            {t('footer.join_newsletter')}
                         </h3>
 
                         <form onSubmit={onSubmitSubscribe} className='mt-2'>
@@ -179,7 +181,7 @@ const Footer = ({needMuchMargin = true}) => {
                                 htmlFor="email"
                                 className="text-black/70 text-[1rem] dark:text-darkSubTextColor font-[400] mb-2"
                             >
-                                Your Email
+                                {t('footer.your_email')}
                             </label>
                             <div className="relative mt-1">
                                 <input
@@ -187,13 +189,12 @@ const Footer = ({needMuchMargin = true}) => {
                                     name="email"
                                     id=""
                                     required
-                                    onChange={(e) => setInputValue(e.target.value)}
                                     placeholder="example@gmail.com"
                                     className="py-3 pl-4 pr-[120px] border dark:text-darkTextColor dark:placeholder:text-darkSubTextColor/50 focus:border-[#0FABCA] dark:border-darkBorderColor w-full bg-transparent border-gray-200 rounded-md focus:ring-0 outline-none"
                                 />
                                 <button type="submit"
                                         className={`absolute top-0 h-full right-0 px-4 text-white bg-[#0FABCA] rounded-r-md transition-all duration-300`}>
-                                    Subscribe
+                                    {t('footer.subscribe')}
                                 </button>
                             </div>
                         </form>
@@ -210,10 +211,9 @@ const Footer = ({needMuchMargin = true}) => {
                              alt='facebook' className='w-[28px]'/>
 
                         <div>
-                            <h4 className='text-[0.9rem] leading-[22px] font-[600] dark:text-darkTextColor text-blue-600'>Facebook
-                                Community</h4>
+                            <h4 className='text-[0.9rem] leading-[22px] font-[600] dark:text-darkTextColor text-blue-600'>{t('footer.facebook_community')}</h4>
                             <p className='text-[0.7rem] font-[300] dark:text-darkSubTextColor text-gray-700'>180+
-                                Members</p>
+                                {t('footer.members')}</p>
                         </div>
                     </a>
 
@@ -241,10 +241,9 @@ const Footer = ({needMuchMargin = true}) => {
                              alt='facebook' className='w-[30px] rounded-full'/>
 
                         <div>
-                            <h4 className='text-[0.9rem] leading-[22px] font-[600] dark:text-darkTextColor text-blue-500'>Discord
-                                Community</h4>
+                            <h4 className='text-[0.9rem] leading-[22px] font-[600] dark:text-darkTextColor text-blue-500'>{t('footer.discord_community')}</h4>
                             <p className='text-[0.7rem] font-[300] dark:text-darkSubTextColor text-gray-700'>120+
-                                Members</p>
+                                {t('footer.members')}</p>
                         </div>
                     </a>
 
@@ -253,7 +252,7 @@ const Footer = ({needMuchMargin = true}) => {
                 <div
                     className="w-full border-t dark:border-darkBorderColor border-gray-100 flex items-center 425px:flex-row flex-col 425px:gap-0 gap-5 justify-center mt-12 pt-6">
                     <p className="text-gray-400 dark:text-darkSubTextColor/70 font-normal text-center text-[0.8rem]">
-                        A product of <a href='https://zenui.net' target="_blank"
+                        {t('footer.product_of')} <a href='https://zenui.net' target="_blank"
                                         className='text-brandColor'>@zenui-labs</a>
                     </p>
                 </div>
