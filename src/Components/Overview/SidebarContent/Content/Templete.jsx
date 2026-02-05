@@ -12,7 +12,11 @@ import Tilt from 'react-parallax-tilt';
 // templates data
 import {templatesData} from "@utils/TemplatesData";
 
+// i18n
+import { useTranslation } from 'react-i18next';
+
 const Templete = () => {
+    const { t } = useTranslation();
 
     function truncateText(text, maxLength) {
         if (text.length <= maxLength) {
@@ -24,12 +28,10 @@ const Templete = () => {
     return (
         <aside className="w-full 640px:pl-[2.5rem] px-6 640px:px-10">
             <h1 className="font-[600] text-brandColor text-[2rem] 425px:text-[2.5rem] 1024px:text-[3rem] capitalize">
-                ZenUI Templates
+                {t('templates.title')}
             </h1>
             <p className="w-full 425px:w-[70%] dark:text-darkSubTextColor text-text text-[1rem]">
-                Browse our collection of React templates to get started building
-                your app with ZenUI, including a React home page, React landing page,
-                and more.
+                {t('templates.description')}
             </p>
 
             <div className="grid grid-cols-1 425px:grid-cols-2 640px:grid-cols-3 w-full mt-12 gap-5">
@@ -51,7 +53,7 @@ const Templete = () => {
                                     <FaEye className="text-primary text-[1.5rem]"/>
                                     <h4 className=" capitalize underline text-text">
                                         <a href={template.liveLink} target="_blank" rel="noreferrer">
-                                            view preview
+                                            {t('templates.view_preview')}
                                         </a>
                                     </h4>
                                 </div>
@@ -63,7 +65,7 @@ const Templete = () => {
                                         {truncateText(template.title, 16)}
 
                                         <p className='py-[1px] px-[10px] rounded-full bg-blue-100 text-blue-500 text-[0.7rem] font-[300] dark:bg-slate-800 dark:border dark:border-slate-700 dark:text-blue-300 w-max'>
-                                            Free
+                                            {t('templates.free')}
                                         </p>
                                     </h1>
                                     <p className="text-gray-500 dark:text-darkSubTextColor text-[0.9rem] mt-3 font-[400]">
@@ -79,7 +81,7 @@ const Templete = () => {
                             >
                                 <a href={template.githubLink} target="_blank"
                                    className='dark:text-darkSubTextColor text-gray-700 group-hover:text-white transition-all duration-300' rel="noreferrer">
-                                    Get Template
+                                    {t('templates.get_template')}
                                 </a>
                             </button>
                         </div>
