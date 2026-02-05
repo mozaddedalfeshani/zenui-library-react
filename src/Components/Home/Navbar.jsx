@@ -24,17 +24,24 @@ import {useGitHubStars} from "@/CustomHooks/useGithubStars.js";
 import {CountUp} from "use-count-up";
 import UpdateBadge from "@shared/UpdateBadge.jsx";
 
+// i18n
+import { useTranslation } from 'react-i18next';
+import { IoLanguage } from "react-icons/io5";
+
 const Navbar = ({className}) => {
+    const { t, i18n } = useTranslation();
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const navigate = useNavigate();
     const [isToolsHover, setIsToolsHover] = useState(false);
     const [showStars, setShowStars] = useState(false);
     const [textWidth, setTextWidth] = useState(0);
     const textRef = useRef(null);
+    const [isLangOpen, setIsLangOpen] = useState(false);
 
     const {stars} = useGitHubStars("Asfak00", "zenui-library");
 
-    const [searchPlaceholderText, setSearchPlaceholderText] = useState("search component");
+    const placeholderKeys = ["components", "blocks", "templates", "ecommerce_kits", "animated_components"];
+    const [currentPlaceholderKey, setCurrentPlaceholderKey] = useState(placeholderKeys[0]);
 
     const handleSearchClick = () => {
         setIsSearchOpen(true);
@@ -44,6 +51,9 @@ const Navbar = ({className}) => {
         const handleClickedOutside = (event) => {
             if (!event.target.closest('.zenuiSearchComponent') && !event.target.closest('.zenuiSearchInput')) {
                 setIsSearchOpen(false)
+            }
+            if (!event.target.closest('.lang-dropdown-container')) {
+                setIsLangOpen(false);
             }
         }
         document.addEventListener('click', handleClickedOutside)
@@ -76,12 +86,10 @@ const Navbar = ({className}) => {
     }, [])
 
     useEffect(() => {
-        const placeholderTexts = ["Components", "Blocks", "Templates", "E-commerce Kits", "Animated Components"];
         let index = 0;
-
         const interval = setInterval(() => {
-            setSearchPlaceholderText(placeholderTexts[index]);
-            index = (index + 1) % placeholderTexts.length;
+            index = (index + 1) % placeholderKeys.length;
+            setCurrentPlaceholderKey(placeholderKeys[index]);
         }, 3000);
 
         return () => clearInterval(interval);
@@ -105,6 +113,11 @@ const Navbar = ({className}) => {
         }
     }, [showStars, stars]);
 
+    const changeLanguage = (lang) => {
+        i18n.changeLanguage(lang);
+        setIsLangOpen(false);
+    };
+
     return (<>
         <nav
             className={`border-gray-100 dark:border-darkBorderColor border-b 1024px:flex w-full px-10 backdrop-blur-2xl sticky top-0 left-0 z-[999] hidden transition-all duration-500 ${className}`}>
@@ -123,12 +136,12 @@ const Navbar = ({className}) => {
                     <ul className={`text-gray-600 flex items-center gap-8 font-[500] capitalize text-[1rem]`}>
                         <Link to='/docs/overview'
                               className='dark:text-darkTextColor cursor-pointer hover:text-[#0FABCA] transition-all duration-200'>
-                            Documentation
+                            {t('navbar.documentation')}
                         </Link>
 
                         <Link to='/components/all-components'
                               className='dark:text-darkTextColor cursor-pointer hover:text-[#0FABCA] transition-all duration-200'>
-                            Components
+                            {t('navbar.components')}
                         </Link>
 
                         <li
@@ -136,7 +149,7 @@ const Navbar = ({className}) => {
                             onMouseLeave={() => setIsToolsHover(false)}
                             className={`${isToolsHover && 'text-[#0FABCA]'} cursor-pointer relative py-[23px] hover:text-[#0FABCA] dark:text-darkTextColor transition-all duration-200 flex items-center gap-[8px]`}
                         >
-                            Tools
+                            {t('navbar.tools')}
                             <IoIosArrowDown
                                 className={`${isToolsHover ? 'rotate-[180deg]' : 'rotate-0'} transition-all duration-300`}/>
 
@@ -159,10 +172,10 @@ const Navbar = ({className}) => {
 
                                         <div>
                                             <p className='cursor-pointer dark:text-darkTextColor leading-[20px] text-gray-800 transition-all text-[1.1rem] duration-200'>
-                                                ShotKey
+                                                {t('tools_dropdown.shotkey')}
                                             </p>
                                             <span
-                                                className='text-[0.8rem] dark:text-darkSubTextColor font-[300] text-gray-500'>generate keyboard shortcuts easily.</span>
+                                                className='text-[0.8rem] dark:text-darkSubTextColor font-[300] text-gray-500'>{t('tools_dropdown.shotkey_desc')}</span>
                                         </div>
 
                                     </Link>
@@ -176,10 +189,10 @@ const Navbar = ({className}) => {
 
                                         <div>
                                             <p className='cursor-pointer dark:text-darkTextColor leading-[20px] text-gray-800 transition-all text-[1.1rem] duration-200'>
-                                                Color Palettes
+                                                {t('tools_dropdown.color_palettes')}
                                             </p>
                                             <span
-                                                className='text-[0.8rem] dark:text-darkSubTextColor font-[300] text-gray-500'>Harmonized color sets.</span>
+                                                className='text-[0.8rem] dark:text-darkSubTextColor font-[300] text-gray-500'>{t('tools_dropdown.color_palettes_desc')}</span>
                                         </div>
 
                                     </Link>
@@ -197,10 +210,10 @@ const Navbar = ({className}) => {
 
                                         <div>
                                             <p className='cursor-pointer dark:text-darkTextColor leading-[20px] text-gray-800 transition-all text-[1.1rem] duration-200'>
-                                                Icons
+                                                {t('tools_dropdown.icons')}
                                             </p>
                                             <span
-                                                className='text-[0.8rem] dark:text-darkSubTextColor font-[300] text-gray-500'>Scalable icons for clear visuals.</span>
+                                                className='text-[0.8rem] dark:text-darkSubTextColor font-[300] text-gray-500'>{t('tools_dropdown.icons_desc')}</span>
                                         </div>
 
                                     </Link>
@@ -215,12 +228,12 @@ const Navbar = ({className}) => {
                                         <div>
                                             <div className='flex items-center gap-2'>
                                                 <p className='cursor-pointer dark:text-darkTextColor leading-[20px] text-gray-800 transition-all text-[1.1rem] duration-200'>
-                                                    Config AI
+                                                    {t('tools_dropdown.config_ai')}
                                                 </p>
                                                 <UpdateBadge/>
                                             </div>
                                             <span
-                                                className='text-[0.8rem] dark:text-darkSubTextColor font-[300] text-gray-500'>Generate tailwind config file by AI.</span>
+                                                className='text-[0.8rem] dark:text-darkSubTextColor font-[300] text-gray-500'>{t('tools_dropdown.config_ai_desc')}</span>
                                         </div>
 
                                     </Link>
@@ -238,10 +251,10 @@ const Navbar = ({className}) => {
 
                                         <div>
                                             <p className='cursor-pointer dark:text-darkTextColor leading-[20px] text-gray-800 transition-all text-[1.1rem] duration-200'>
-                                                Semantic TagMaster
+                                                {t('tools_dropdown.semantic_tagmaster')}
                                             </p>
                                             <span
-                                                className='text-[0.8rem] dark:text-darkSubTextColor font-[300] text-gray-500'>HTML semantic tags use cases</span>
+                                                className='text-[0.8rem] dark:text-darkSubTextColor font-[300] text-gray-500'>{t('tools_dropdown.semantic_tagmaster_desc')}</span>
                                         </div>
 
                                     </Link>
@@ -252,7 +265,7 @@ const Navbar = ({className}) => {
 
                         <Link to='/contributors'
                               className='dark:text-darkTextColor cursor-pointer hover:text-[#0FABCA] transition-all duration-200'>
-                            Contributors
+                            {t('navbar.contributors')}
                         </Link>
 
                     </ul>
@@ -264,14 +277,14 @@ const Navbar = ({className}) => {
                             className={`text-gray-400 absolute dark:text-slate-400 left-3 top-[0.7rem] text-[1.4rem]`}/>
                         <AnimatePresence>
                             <motion.p
-                                key={searchPlaceholderText}
+                                key={currentPlaceholderKey}
                                 initial={{opacity: 0, y: -10}}
                                 animate={{opacity: 1, y: 0}}
                                 exit={{opacity: 0, y: 10}}
                                 transition={{duration: 0.5}}
                                 className='text-[0.9rem] dark:text-slate-400 text-gray-400 absolute top-[11px] left-[40px]'
                             >
-                                {searchPlaceholderText}
+                                {t(`navbar.search_placeholders.${currentPlaceholderKey}`)}
                             </motion.p>
                         </AnimatePresence>
                         <input
@@ -314,6 +327,40 @@ const Navbar = ({className}) => {
                                 </p>
                             </motion.div>
                         </motion.a>
+
+                        {/* Language Toggle */}
+                        <div className="relative lang-dropdown-container">
+                            <div 
+                                onClick={() => setIsLangOpen(!isLangOpen)}
+                                className='text-[1.5rem] hover:bg-gray-50 dark:hover:bg-slate-900 dark:border-darkBorderColor dark:text-slate-400 text-gray-400 overflow-hidden h-[43px] w-[43px] border border-border rounded-normal flex items-center justify-center cursor-pointer'
+                            >
+                                <IoLanguage />
+                            </div>
+                            
+                            <AnimatePresence>
+                                {isLangOpen && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: 10 }}
+                                        className="absolute top-[50px] right-0 bg-white dark:bg-slate-800 border border-gray-100 dark:border-darkBorderColor rounded-normal shadow-lg p-2 min-w-[120px]"
+                                    >
+                                        <button 
+                                            onClick={() => changeLanguage('en')}
+                                            className={`w-full text-left px-3 py-2 rounded-md transition-colors ${i18n.language === 'en' ? 'bg-brandColor/10 text-brandColor' : 'hover:bg-gray-100 dark:hover:bg-slate-700 dark:text-darkTextColor'}`}
+                                        >
+                                            English
+                                        </button>
+                                        <button 
+                                            onClick={() => changeLanguage('bn')}
+                                            className={`w-full text-left px-3 py-2 rounded-md transition-colors ${i18n.language === 'bn' ? 'bg-brandColor/10 text-brandColor' : 'hover:bg-gray-100 dark:hover:bg-slate-700 dark:text-darkTextColor'}`}
+                                        >
+                                            Bangla
+                                        </button>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
 
                         <div onClick={toggleTheme}
                              className='text-[1.5rem] hover:bg-gray-50 dark:hover:bg-slate-900 dark:border-darkBorderColor dark:text-slate-400 text-gray-400 overflow-hidden h-[43px] border border-border rounded-normal px-[9px] p-1 cursor-pointer'>
