@@ -7,8 +7,11 @@ import SectionHead from "./SectionHead.jsx";
 import SectionWrapper from "./SectionWrapper.jsx";
 import {useNavigate} from "react-router-dom";
 
-const ComponentsSlider = () => {
+// i18n
+import { useTranslation } from 'react-i18next';
 
+const ComponentsSlider = () => {
+    const { t } = useTranslation();
     const [components, setComponents] = useState(() => [...allComponents, ...allComponents])
 
     const navigate = useNavigate();
@@ -16,9 +19,8 @@ const ComponentsSlider = () => {
     return (
         <SectionWrapper className='relative mt-28'>
             <SectionHead
-                description={'Handcrafted, ready-to-use, and diverse collection of free UI components designed for rapid MVP\n' +
-                    '                    development. Just Browse, copy-paste, and you\'re done!'}
-                title={'Essential UI Components'} isSubjet={'600+'}/>
+                description={t('home.components_slider.description')}
+                title={t('home.components_slider.title')} isSubjet={t('home.components_slider.subject')}/>
 
             <div
                 className="h-[500px] mt-14 relative flex items-center justify-center w-full overflow-hidden [mask-image:_linear-gradient(to_bottom,transparent_0,_black_60px,_black_calc(100%-60px),transparent_100%)]">
@@ -48,7 +50,7 @@ const ComponentsSlider = () => {
                 onClick={() => navigate("/components/all-components")}
                 className='py-3 px-6 640px:px-8 bg-[#0FABCA] text-white rounded-normal absolute -bottom-12 z-20 left-[50%] translate-x-[-50%] hover:bg-[#1cbedb] transition-all flex items-center justify-center gap-3 duration-300 group'
             >
-                All Components
+                {t('home.components_slider.all_components')}
             </button>
         </SectionWrapper>
     );
