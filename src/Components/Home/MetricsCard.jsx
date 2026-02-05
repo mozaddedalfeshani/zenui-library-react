@@ -7,32 +7,36 @@ import SectionHead from "./SectionHead.jsx";
 import SectionWrapper from "./SectionWrapper.jsx";
 import {useGitHubStars} from "@/CustomHooks/useGithubStars.js";
 
+// i18n
+import { useTranslation } from 'react-i18next';
+
 const MetricsCard = () => {
+    const { t } = useTranslation();
     const {stars} = useGitHubStars("Asfak00", "zenui-library")
 
     const metrics = [
         {
             icon: <MdOutlineFileDownload className="h-10 w-10 text-white"/>,
             value: "30.5k+",
-            label: "Active Users",
+            label: t('home.metrics.active_users'),
             bgColor: "bg-gradient-to-br from-pink-500 to-pink-400"
         },
         {
             icon: <BiLayout className="h-10 w-10 text-white"/>,
             value: "800+",
-            label: "UI Components",
+            label: t('home.metrics.ui_components'),
             bgColor: "bg-gradient-to-br from-green-500 to-green-400"
         },
         {
             icon: <BsFileText className="h-9 w-9 text-white"/>,
             value: "20+",
-            label: "Pre-built Templates",
+            label: t('home.metrics.pre_built_templates'),
             bgColor: "bg-gradient-to-br from-cyan-500 to-cyan-400"
         },
         {
             icon: <FaStar className="h-9 w-9 text-white"/>,
             value: stars + "+",
-            label: "Github Stars",
+            label: t('home.metrics.github_stars'),
             bgColor: "bg-gradient-to-br from-orange-500 to-orange-400"
         }
     ];
@@ -46,8 +50,8 @@ const MetricsCard = () => {
                      alt='shape-image'
                      className='absolute bottom-24 z-[-1] 640px:bottom-0 w-full 640px:w-[900px] rotate-[50deg] 640px:rotate-[30deg] -left-32'/>
 
-                <SectionHead title={'Complete UI For Your Next Project'}
-                             description={'Massive number of components, templates, open-source version, free perks and more. All in one place.'}/>
+                <SectionHead title={t('home.metrics.title')}
+                             description={t('home.metrics.description')}/>
 
                 {/* Metrics grid */}
                 <div
