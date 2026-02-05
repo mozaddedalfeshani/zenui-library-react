@@ -61,57 +61,57 @@ const Content = () => {
                         label: t('sidebar.form'),
                     },
                     {
-                        title: "Input",
+                        title: t('sidebar.input'),
                         url: "/components/input-text",
                         parent: 'FORM'
                     },
                     {
-                        title: "Textarea",
+                        title: t('sidebar.textarea'),
                         url: "/components/input-textarea",
                         parent: 'FORM'
                     },
                     {
-                        title: "Number",
+                        title: t('sidebar.number'),
                         url: "/components/input-number",
                         parent: 'FORM'
                     },
                     {
-                        title: "Checkbox",
+                        title: t('sidebar.checkbox'),
                         url: "/components/input-checkbox",
                         parent: 'FORM'
                     },
                     {
-                        title: "Switch",
+                        title: t('sidebar.switch'),
                         url: "/components/input-switch",
                         parent: 'FORM'
                     },
                     {
-                        title: "Strong Password",
+                        title: t('sidebar.strong_password'),
                         url: "/components/strong-password",
                         parent: 'FORM'
                     },
                     {
-                        title: "Select",
+                        title: t('sidebar.select'),
                         url: "/components/input-select",
                         parent: 'FORM'
                     },
                     {
-                        title: "Radio",
+                        title: t('sidebar.radio'),
                         url: "/components/input-radio",
                         parent: 'FORM'
                     },
                     {
-                        title: "Range",
+                        title: t('sidebar.range'),
                         url: "/components/input-range",
                         parent: 'FORM'
                     },
                     {
-                        title: "File",
+                        title: t('sidebar.file'),
                         url: "/components/input-file",
                         parent: 'FORM'
                     },
                     {
-                        title: "OTP Input",
+                        title: t('sidebar.otp_input'),
                         url: "/components/otp-input",
                         parent: 'FORM'
                     },
@@ -119,22 +119,22 @@ const Content = () => {
                         label: t('sidebar.buttons'),
                     },
                     {
-                        title: "Normal Button",
+                        title: t('sidebar.normal_button'),
                         url: "/components/normal-button",
                         parent: 'BUTTONS'
                     },
                     {
-                        title: "Login Button",
+                        title: t('sidebar.login_button'),
                         url: "/components/login-buttons",
                         parent: 'BUTTONS'
                     },
                     {
-                        title: "Dropdown Button",
+                        title: t('sidebar.dropdown_button'),
                         url: "/components/dropdown-button",
                         parent: 'BUTTONS'
                     },
                     {
-                        title: "Animated Button",
+                        title: t('sidebar.animated_button'),
                         url: "/components/animated-button",
                         parent: 'BUTTONS',
                         isUpdated: true
@@ -143,53 +143,53 @@ const Content = () => {
                         label: t('sidebar.surfaces'),
                     },
                     {
-                        title: "Drag & Drop",
+                        title: t('sidebar.drag_drop'),
                         url: "/components/drag-and-drop",
                         parent: 'SURFACES'
                     },
                     {
-                        title: "Comparison Card",
+                        title: t('sidebar.comparison_card'),
                         url: "/components/comparison-card",
                         parent: 'SURFACES',
                     },
                     {
-                        title: "Cards",
+                        title: t('sidebar.card_components'),
                         url: "/components/cards",
                         parent: 'SURFACES'
                     },
                     {
-                        title: "Drawer",
+                        title: t('sidebar.drawer'),
                         url: "/components/drawer",
                         parent: 'SURFACES',
                         isNewComponent: true,
                     },
                     {
-                        title: "Animated Cards",
+                        title: t('sidebar.animated_cards'),
                         url: "/components/animated-cards",
                         parent: 'SURFACES'
                     },
                     {
-                        title: "Image Cropper",
+                        title: t('sidebar.image_cropper'),
                         url: "/components/image-cropper",
                         parent: 'SURFACES',
                     },
                     {
-                        title: "Accordion",
+                        title: t('sidebar.accordion'),
                         url: "/components/according",
                         parent: 'SURFACES'
                     },
                     {
-                        title: "App bar",
+                        title: t('sidebar.app_bar'),
                         url: "/components/appbar",
                         parent: 'SURFACES'
                     },
                     {
-                        title: "Image Gallery",
+                        title: t('sidebar.image_gallery'),
                         url: "/components/image-gallery",
                         parent: 'SURFACES'
                     },
                     {
-                        title: "Carousel",
+                        title: t('sidebar.carousel'),
                         url: "/components/carousel",
                         parent: 'SURFACES',
                         isUpdated: true,
@@ -198,61 +198,55 @@ const Content = () => {
                         label: t('sidebar.navigation'),
                     },
                     {
-                        title: "Pagination",
+                        title: t('sidebar.pagination'),
                         url: "/components/pagination",
                         parent: 'NAVIGATION'
                     },
                     {
-                        title: "Progress Bar",
+                        title: t('sidebar.progress_bar'),
                         url: "/components/progress-bar",
                         parent: 'NAVIGATION',
                         isUpdated: true,
                     },
                     {
-                        title: "Chip",
+                        title: t('sidebar.chip'),
                         url: "/components/chip",
                         parent: 'NAVIGATION'
                     },
                     {
-                        title: "Marquee",
+                        title: t('sidebar.marquee'),
                         url: "/components/marquee",
                         parent: 'NAVIGATION',
                     },
-                    // {
-                    //     title: "Slider",
-                    //     url: "/components/slider",
-                    //     parent: 'NAVIGATION',
-                    //     isNewComponent: true,
-                    // },
                     {
-                        title: "Timer",
+                        title: t('sidebar.timer'),
                         url: "/components/timer",
                         parent: 'NAVIGATION'
                     },
                     {
-                        title: "Breadcrumb",
+                        title: t('sidebar.breadcrumb'),
                         url: "/components/breadcrumb",
                         parent: 'NAVIGATION',
                         isUpdated: true
                     },
                     {
-                        title: "Rating",
+                        title: t('sidebar.rating'),
                         url: "/components/rating",
                         parent: 'NAVIGATION'
                     },
                     {
-                        title: "Stepper",
+                        title: t('sidebar.stepper'),
                         url: "/components/stepper",
                         parent: 'NAVIGATION'
                     },
                     {
-                        title: "Modal",
+                        title: t('sidebar.modal'),
                         url: "/components/modal",
                         parent: 'NAVIGATION',
                         isUpdated: true,
                     },
                     {
-                        title: "Tabs",
+                        title: t('sidebar.tabs'),
                         url: "/components/tabs",
                         parent: 'NAVIGATION'
                     },
@@ -260,42 +254,42 @@ const Content = () => {
                         label: t('sidebar.feedback'),
                     },
                     {
-                        title: "Context Menu",
+                        title: t('sidebar.context_menu'),
                         url: "/components/context-menu",
                         parent: 'FEEDBACK'
                     },
                     {
-                        title: "Skeleton",
+                        title: t('sidebar.skeleton'),
                         url: "/components/skeleton",
                         parent: 'FEEDBACK'
                     },
                     {
-                        title: "Tree Dropdown",
+                        title: t('sidebar.tree_dropdown'),
                         url: "/components/tree-dropdown",
                         parent: 'FEEDBACK'
                     },
                     {
-                        title: "Alert Message",
+                        title: t('sidebar.alert_message'),
                         url: "/components/alert-message",
                         parent: 'FEEDBACK'
                     },
                     {
-                        title: "Dialog",
+                        title: t('sidebar.dialog'),
                         url: "/components/dialog-message",
                         parent: 'FEEDBACK'
                     },
                     {
-                        title: "Testimonial",
+                        title: t('sidebar.testimonial'),
                         url: "/components/testimonials",
                         parent: 'FEEDBACK'
                     },
                     {
-                        title: "Loader",
+                        title: t('sidebar.loader'),
                         url: "/components/loader",
                         parent: 'FEEDBACK'
                     },
                     {
-                        title: "Notification",
+                        title: t('sidebar.notification'),
                         url: "/components/notification",
                         parent: 'FEEDBACK'
                     },
@@ -303,43 +297,43 @@ const Content = () => {
                         label: t('sidebar.data_display'),
                     },
                     {
-                        title: "Badge",
+                        title: t('sidebar.badge'),
                         url: "/components/badge",
                         parent: 'DATA DISPLAY'
                     },
                     {
-                        title: "Table",
+                        title: t('sidebar.table'),
                         url: "/components/table",
                         parent: 'DATA DISPLAY'
                     },
                     {
-                        title: "Redo & Undo",
+                        title: t('sidebar.redo_undo'),
                         url: "/components/redo-undo",
                         parent: 'DATA DISPLAY',
                     },
                     {
-                        title: "Github Activity Graph",
+                        title: t('sidebar.github_activity_graph'),
                         url: "/components/github-activity-graph",
                         parent: 'DATA DISPLAY',
                     },
                     {
-                        title: "Tooltip",
+                        title: t('sidebar.tooltip'),
                         url: "/components/tooltip",
                         parent: 'DATA DISPLAY'
                     },
                     {
-                        title: "Pie Chart",
+                        title: t('sidebar.pie_chart'),
                         url: "/components/pie-chart",
                         parent: 'DATA DISPLAY'
                     },
                     {
-                        title: "Graph Chart",
+                        title: t('sidebar.graph_chart'),
                         url: "/components/graph-chart",
                         parent: 'DATA DISPLAY',
                         isNewComponent: true
                     },
                     {
-                        title: "Timeline",
+                        title: t('sidebar.timeline'),
                         url: "/components/timeline",
                         parent: 'DATA DISPLAY',
                     },
@@ -347,12 +341,12 @@ const Content = () => {
                         label: t('sidebar.ecommerce'),
                     },
                     {
-                        title: "Product Card",
+                        title: t('sidebar.product_card'),
                         url: "/components/product-card",
                         parent: 'E-COMMERCE',
                     },
                     {
-                        title: "Ads Card",
+                        title: t('sidebar.ads_card'),
                         url: "/components/ads-card",
                         parent: 'E-COMMERCE',
                     },
@@ -360,12 +354,12 @@ const Content = () => {
                         label: t('sidebar.randoms'),
                     },
                     {
-                        title: "Code",
+                        title: t('sidebar.code'),
                         url: "/components/code",
                         parent: 'RANDOMS'
                     },
                     {
-                        title: "Snippet",
+                        title: t('sidebar.snippet'),
                         url: "/components/snippet",
                         parent: 'RANDOMS'
                     },
@@ -383,17 +377,17 @@ const Content = () => {
                         label: t('sidebar.cards'),
                     },
                     {
-                        title: "Magic Card",
+                        title: t('sidebar.magic_card'),
                         url: "/animations/magic-card",
                         parent: 'CARDS'
                     },
                     {
-                        title: "Reveal Card",
+                        title: t('sidebar.reveal_card'),
                         url: "/animations/reveal-card",
                         parent: 'CARDS'
                     },
                     {
-                        title: "Magnet Card",
+                        title: t('sidebar.magnet_card'),
                         url: "/animations/magnet-card",
                         parent: 'CARDS'
                     },
@@ -401,22 +395,22 @@ const Content = () => {
                         label: t('sidebar.layouts'),
                     },
                     {
-                        title: "Sorting Animation",
+                        title: t('sidebar.sorting_animation'),
                         url: "/animations/sorting-animation",
                         parent: 'LAYOUTS'
                     },
                     {
-                        title: "Layout Switcher",
+                        title: t('sidebar.layout_switcher'),
                         url: "/animations/layout-switcher",
                         parent: 'LAYOUTS'
                     },
                     {
-                        title: "Drag Animations",
+                        title: t('sidebar.drag_animations'),
                         url: "/animations/drag-animations",
                         parent: 'LAYOUTS'
                     },
                     {
-                        title: "Animated Accordion",
+                        title: t('sidebar.animated_accordion'),
                         url: "/animations/animated-accordion",
                         parent: 'LAYOUTS'
                     },
@@ -424,13 +418,13 @@ const Content = () => {
                         label: t('sidebar.buttons'),
                     },
                     {
-                        title: "Reaction Trail",
+                        title: t('sidebar.reaction_trail'),
                         url: "/animations/reaction-trail",
                         parent: 'BUTTONS',
                         isUpdated: true,
                     },
                     {
-                        title: "Hover Effects",
+                        title: t('sidebar.hover_effects'),
                         url: "/animations/hover-effects",
                         parent: 'BUTTONS'
                     },
@@ -438,39 +432,39 @@ const Content = () => {
                         label: t('sidebar.visuals'),
                     },
                     {
-                        title: "Text Effects",
+                        title: t('sidebar.text_effects'),
                         url: "/animations/text-effects",
                         parent: 'VISUALS',
                         isUpdated: true,
                     },
                     {
-                        title: "Background Animations",
+                        title: t('sidebar.background_animations'),
                         url: "/animations/background-animations",
                         parent: 'VISUALS'
                     },
                     {
-                        title: "Chat Screen",
+                        title: t('sidebar.chat_screen'),
                         url: "/animations/chat-screen",
                         parent: 'VISUALS'
                     },
                     {
-                        title: "Dropdown Animations",
+                        title: t('sidebar.dropdown_animations'),
                         url: "/animations/dropdown-animations",
                         parent: 'VISUALS'
                     },
                     {
-                        title: "Mouse Navigations",
+                        title: t('sidebar.mouse_navigations'),
                         url: "/animations/mouse-navigations",
                         isNewComponent: true,
                         parent: 'VISUALS'
                     },
                     {
-                        title: "Gallery View",
+                        title: t('sidebar.gallery_view'),
                         url: "/animations/gallery-view",
                         parent: 'VISUALS'
                     },
                     {
-                        title: "Search Placeholder",
+                        title: t('sidebar.search_placeholder_comp'),
                         url: "/animations/search-placeholder",
                         parent: 'VISUALS',
                         isNewComponent: true
@@ -489,22 +483,22 @@ const Content = () => {
                         label: t('sidebar.sections'),
                     },
                     {
-                        title: "Responsive Navbar",
+                        title: t('sidebar.responsive_navbar'),
                         url: "/blocks/responsive-navbar",
                         parent: 'Sections'
                     },
                     {
-                        title: "Hero Section",
+                        title: t('sidebar.hero_section'),
                         url: "/blocks/hero-section",
                         parent: 'Sections'
                     },
                     {
-                        title: "Pricing Section",
+                        title: t('sidebar.pricing_section'),
                         url: "/blocks/pricing-section",
                         parent: 'Sections'
                     },
                     {
-                        title: "Responsive Footer",
+                        title: t('sidebar.responsive_footer'),
                         url: "/blocks/responsive-footer",
                         parent: 'Sections'
                     },
@@ -512,17 +506,17 @@ const Content = () => {
                         label: t('sidebar.form'),
                     },
                     {
-                        title: "Contact Form",
+                        title: t('sidebar.contact_form'),
                         url: "/blocks/contact-form",
                         parent: 'Form'
                     },
                     {
-                        title: "Multi-Step Form",
+                        title: t('sidebar.multi_step_form'),
                         url: "/blocks/multi-step-form",
                         parent: 'Form'
                     },
                     {
-                        title: "Newsletter Form",
+                        title: t('sidebar.newsletter_form'),
                         url: "/blocks/newsletter-form",
                         parent: 'Form'
                     },
@@ -530,12 +524,12 @@ const Content = () => {
                         label: t('sidebar.empty_pages'),
                     },
                     {
-                        title: "404 Page",
+                        title: t('sidebar.page_404'),
                         url: "/blocks/404-page",
                         parent: 'Empty Pages'
                     },
                     {
-                        title: "Empty Page",
+                        title: t('sidebar.empty_page'),
                         url: "/blocks/empty-page",
                         parent: 'Empty Pages'
                     },
@@ -543,17 +537,17 @@ const Content = () => {
                         label: t('sidebar.ecommerce'),
                     },
                     {
-                        title: "Offer Grid",
+                        title: t('sidebar.offer_grid'),
                         url: "/blocks/offer-grid",
                         parent: 'E-Commerce',
                     },
                     {
-                        title: "Product Details Page",
+                        title: t('sidebar.product_details_page'),
                         url: "/blocks/product-details-page",
                         parent: 'E-Commerce',
                     },
                     {
-                        title: "Checkout Page",
+                        title: t('sidebar.checkout_page'),
                         url: "/blocks/checkout-page",
                         parent: 'E-Commerce',
                     },
@@ -561,12 +555,12 @@ const Content = () => {
                         label: t('sidebar.random'),
                     },
                     {
-                        title: "Responsive Search Bar",
+                        title: t('sidebar.responsive_search_bar'),
                         url: "/blocks/responsive-search-bar",
                         parent: 'Random'
                     },
                     {
-                        title: "Responsive Sidebar",
+                        title: t('sidebar.responsive_sidebar'),
                         url: "/blocks/responsive-sidebar",
                         parent: 'Random'
                     },
