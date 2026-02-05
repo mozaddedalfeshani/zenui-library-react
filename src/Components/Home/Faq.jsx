@@ -3,68 +3,61 @@ import React, {useState} from 'react';
 import SectionHead from "./SectionHead.jsx";
 import SectionWrapper from "./SectionWrapper.jsx";
 
-const Faq = () => {
+// i18n
+import { useTranslation } from 'react-i18next';
 
+const Faq = () => {
+    const { t } = useTranslation();
     const [isAccording1, setIsAccording1] = useState(null);
     const [isAccording2, setIsAccording2] = useState(null);
 
     const accordingData1 = [
         {
-            title: "What is ZenUI Library React?",
-            description:
-                "ZenUI Library React is a free collection of UI components and templates designed for developers and businesses. It offers a variety of pre-built components, website templates, essential blocks, and SVG icons to help speed up web development.",
+            title: t('home.faq.q1'),
+            description: t('home.faq.a1'),
         },
         {
-            title: "Is ZenUI Library React free to use?",
-            description:
-                "Yes, ZenUI Library React is completely free to use. It provides high-quality UI components and templates at no cost, making it accessible to everyone.",
+            title: t('home.faq.q2'),
+            description: t('home.faq.a2'),
         },
         {
-            title: "Can I customize the components in ZenUI Library React?",
-            description:
-                `Absolutely! All components in ZenUI Library React are fully customizable. You can modify them to fit your project's design requirements using your preferred CSS framework or custom styles.`,
+            title: t('home.faq.q3'),
+            description: t('home.faq.a3'),
         },
 
         {
-            title: `Do I need to attribute ZenUI Library React when using it in my projects?`,
-            description:
-                `Attribution is appreciated but not required. You're free to use ZenUI Library React in your projects without needing to give credit, although a mention would help support the project.`,
+            title: t('home.faq.q4'),
+            description: t('home.faq.a4'),
         },
 
         {
-            title: `How often is ZenUI Library React updated?`,
-            description:
-                `ZenUI Library React is regularly updated with new components, templates, and features. The team behind ZenUI is committed to keeping the library fresh and relevant to current design trends.`,
+            title: t('home.faq.q5'),
+            description: t('home.faq.a5'),
         },
     ];
 
     const accordingData2 = [
         {
-            title: "Is ZenUI Library React compatible with React and Vue?",
-            description:
-                "Yes, you can use every component in ZenUI Library React with your React, Tailwind CSS, and Next.js projects. However, compatibility with Vue is coming soon, so stay tuned for updates!",
+            title: t('home.faq.q6'),
+            description: t('home.faq.a6'),
         },
         {
-            title: "Can I contribute to ZenUI Library React?",
-            description:
-                "Yes, contributions are welcome! If you’re a designer or developer who wants to contribute to the ZenUI Library React, you can submit your components or templates. Your contributions will be credited on the website's 'About Us' section.",
+            title: t('home.faq.q7'),
+            description: t('home.faq.a7'),
         },
         {
-            title: "What is the difference between ZenUI and other UI libraries?",
-            description:
-                `ZenUI Library React stands out for its focus on simplicity and ease of use. It’s designed to be lightweight, customizable, and accessible, making it ideal for developers who need quick, high-quality solutions without the bloat of larger libraries. Additionally, unlike many other UI libraries, you don't need to install ZenUI Library React in your project—just copy the code and use it without any dependencies. This makes integration fast and hassle-free.`,
+            title: t('home.faq.q8'),
+            description: t('home.faq.a8'),
         },
 
         {
-            title: `Is there any documentation available for ZenUI Library React?`,
-            description:
-                `Yes, ZenUI Library React provides detailed documentation for each component and template. The documentation includes usage instructions, code examples, and customization tips to help you get started quickly.`,
+            title: t('home.faq.q9'),
+            description: t('home.faq.a9'),
         },
 
         {
-            title: `How can I stay updated on ZenUI Library React releases?`,
-            description:
-                `You can stay updated by following ZenUI Library React on social media, subscribing to the newsletter, or checking the official website regularly. Updates and new releases are announced through these channels.`,
+            title: t('home.faq.q10'),
+            description: t('home.faq.a10'),
         },
     ];
 
@@ -74,8 +67,7 @@ const Faq = () => {
 
     return (
         <SectionWrapper>
-            <SectionHead title={'FAQ'} description={'Find\n' +
-                '                    quick answers to common queries'}/>
+            <SectionHead title={t('home.faq.title')} description={t('home.faq.description')}/>
 
             <section className='mt-14 mb-16 grid grid-cols-1 1024px:grid-cols-2 gap-[15px]'>
                 <div className='flex-col flex gap-[15px]'>
