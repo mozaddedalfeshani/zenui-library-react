@@ -8,7 +8,11 @@ import FilterByPackage from "./FilterByPackage.jsx";
 import FilterByBookmarks from "./FilterByBookmarks.jsx";
 import BlocksFooter from "@shared/Block/BlocksFooter.jsx";
 
+// i18n
+import { useTranslation } from 'react-i18next';
+
 const Resources = () => {
+    const { t } = useTranslation();
     const [selectedLanguage, setSelectedLanguage] = useState({slug: 'all'})
     const [selectedPackage, setSelectedPackage] = useState({slug: 'all'})
     const [bookmark, setBookmark] = useState({slug: 'all'})
@@ -85,38 +89,34 @@ const Resources = () => {
     return (
         <aside className='w-full 640px:pl-[2.5rem] px-6 640px:px-10'>
             <h1 className="text-[2rem] 425px:text-[2.7rem] font-[600] text-brandColor">
-                Resources
+                {t('resources.title')}
             </h1>
             <p className="w-full text-text text-[1rem] dark:text-darkSubTextColor mb-5">
-                {
-                    `The Resources tab in ZenUI Library offers over ${resourcesData?.length}+ (more coming) carefully curated resources that developers truly
-                need. From code snippets to design tools and development guides, everything is readily available to
-                enhance your projects and boost your productivity. Explore and make the most of these essential tools!`
-                }
+                {t('resources.desc_prefix')} {resourcesData?.length}{t('resources.desc_suffix')}
             </p>
 
             {/* filters */}
             <div className='flex items-end flex-wrap gap-[10px]'>
                 <div>
-                    <p className='text-[0.9rem] font-[600] text-gray-500 mb-1 dark:text-darkSubTextColor'>Search:</p>
+                    <p className='text-[0.9rem] font-[600] text-gray-500 mb-1 dark:text-darkSubTextColor'>{t('resources.search_label')}</p>
                     <input
                         value={searchValue}
                         onChange={(e) => setSearchValue(e.target.value)}
-                        placeholder='Search resource'
+                        placeholder={t('resources.search_placeholder')}
                         className='border-border dark:bg-slate-900 dark:border-darkBorderColor dark:text-darkSubTextColor border w-full 640px:w-[250px] rounded-normal outline-none px-4 py-2.5 focus:border-primary transition-colors duration-300'
                     />
                 </div>
                 <div className='w-full 1024px:w-fit'>
-                    <p className='text-[0.9rem] font-[600] text-gray-500 mb-1 dark:text-darkSubTextColor'>Language:</p>
+                    <p className='text-[0.9rem] font-[600] text-gray-500 mb-1 dark:text-darkSubTextColor'>{t('resources.language_label')}</p>
                     <FilterByLanguages selectedLanguage={selectedLanguage}
                                        setSelectedLanguage={handleSetSelectedLanguage}/>
                 </div>
                 <div className='w-full 1024px:w-fit'>
-                    <p className='text-[0.9rem] font-[600] text-gray-500 mb-1 dark:text-darkSubTextColor'>Tool:</p>
+                    <p className='text-[0.9rem] font-[600] text-gray-500 mb-1 dark:text-darkSubTextColor'>{t('resources.tool_label')}</p>
                     <FilterByPackage setSelectedPackage={handleSelectedPackage}/>
                 </div>
                 <div className='w-full 1024px:w-fit'>
-                    <p className='text-[0.9rem] font-[600] text-gray-500 mb-1 dark:text-darkSubTextColor'>Bookmark:</p>
+                    <p className='text-[0.9rem] font-[600] text-gray-500 mb-1 dark:text-darkSubTextColor'>{t('resources.bookmark_label')}</p>
                     <FilterByBookmarks setBookmark={handleBookmark}/>
                 </div>
             </div>
@@ -137,7 +137,7 @@ const Resources = () => {
                         <div className='flex items-center gap-[10px] justify-end mt-4'>
                             <a href={resource.websiteUrl} target='_blank'
                                className='py-2 px-3 bg-brandColor hover:bg-blue-500 transition-all duration-200 active:scale-[0.9] text-white rounded-md text-[0.9rem] flex items-center gap-[5px]' rel="noreferrer">
-                                Visit website
+                                {t('resources.visit_website')}
                                 <RxExternalLink className='text-[1.2rem] font-[500]'/>
                             </a>
 
@@ -159,7 +159,7 @@ const Resources = () => {
                     <div className='flex items-center justify-center flex-col my-8'>
                         <img alt='empty/image' src='https://i.ibb.co.com/tL9Q9Qx/HR-looking-through-candidates-CVs.png'
                              className='w-[120px]'/>
-                        <p className='text-[1rem] text-gray-500 dark:text-darkSubTextColor/70'>No Resource Found!</p>
+                        <p className='text-[1rem] text-gray-500 dark:text-darkSubTextColor/70'>{t('resources.no_resource')}</p>
                     </div>
                 )
             }
