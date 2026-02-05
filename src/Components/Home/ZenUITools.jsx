@@ -3,40 +3,44 @@ import React, { useEffect, useState } from 'react';
 import SectionHead from "./SectionHead.jsx";
 import SectionWrapper from "./SectionWrapper.jsx";
 
+// i18n
+import { useTranslation } from 'react-i18next';
+
 const ZenUITools = () => {
+    const { t } = useTranslation();
     const [selectedImage, setSelectedImage] = useState(0);
     const [expandedCard, setExpandedCard] = useState(0);
 
     const cardData = [
         {
-            title: "ShortKey",
+            title: t('tools_dropdown.shotkey'),
             duration: '700',
             url: '/shortcut-generator',
-            description: "Type your custom shortcut to instantly generate a function with conditions, enabling specific logic execution when the shortcut keys are pressed. Make Simplify your workflow!"
+            description: t('home.tools.shortkey_desc')
         },
         {
-            title: "Icons",
+            title: t('tools_dropdown.icons'),
             duration: '1000',
             url: '/icons',
-            description: "Explore and enjoy ZenUI Library's collection of free icons, designed for customization and easy integration. Download and use them to enhance your projects."
+            description: t('home.tools.icons_desc')
         },
         {
-            title: "Config AI",
+            title: t('tools_dropdown.config_ai'),
             duration: '1000',
             url: '/config-generator',
-            description: "Config AI will provide you with a ready-to-use configuration by generating a tailwind.config.js file with custom colors, fonts, and other settings tailored to your project needs."
+            description: t('home.tools.config_ai_desc')
         },
         {
-            title: "Color Palette",
+            title: t('tools_dropdown.color_palettes'),
             duration: '1300',
             url: '/color-palette',
-            description: "Customize your color shades! Paste a color code to explore shades, view hex, RGB, and HSL codes, and copy them instantly for seamless integration into your projects."
+            description: t('home.tools.color_palette_desc')
         },
         {
-            title: "Semantic TagMaster",
+            title: t('tools_dropdown.semantic_tagmaster'),
             duration: '1300',
             url: '/semantic-tag-master',
-            description: "Semantic TagMaster is a tool that helps you generate semantic HTML tags for your projects, ensuring better accessibility and SEO optimization. Create meaningful and structured content effortlessly."
+            description: t('home.tools.semantic_tagmaster_desc')
         }
     ];
 
@@ -121,9 +125,9 @@ const ZenUITools = () => {
     return (
         <SectionWrapper className='mt-28'>
             <SectionHead
-                description={'Streamline your workflow with a versatile color palette, an extensive icon library, and a dynamic keyboard shortcut generator.'}
-                title={'Useful Tools'}
-                isSubjet={'ZenUI'}
+                description={t('home.tools.description')}
+                title={t('home.tools.title')}
+                isSubjet={t('home.tools.subject')}
             />
 
             <div className='grid grid-cols-1 min-h-[520px] 1024px:grid-cols-2 mt-14 gap-[50px]'>
